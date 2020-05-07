@@ -5,6 +5,8 @@ import Grid from '@material-ui/core/Grid';
 import banner from '../Home/assets/fresh-food-banner.jpg';
 import Typography from '@material-ui/core/Typography';
 
+import { v4 as uuidv4 } from 'uuid';
+
 const styles = {
   root: {
     flexGrow: 1,
@@ -57,7 +59,7 @@ class Detail extends React.Component<props> {
   }
 
   componentDidMount() {
-    fetch('http://127.0.0.1:8000/search/get', {
+    fetch('https://django-testing-and-deploy.herokuapp.com/api/get', {
       method: 'POST',
       body: JSON.stringify({
         "search_text": this.state.name,
@@ -102,7 +104,7 @@ class Detail extends React.Component<props> {
                 Ingredients
               </Typography>
               <ul>
-                {this.state.ingredients.map((name) => <li> {name.name}</li>)}
+                {this.state.ingredients.map((name) => <li key={uuidv4()}> {name.name}</li>)}
               </ul>
             </Paper>
           </Grid>

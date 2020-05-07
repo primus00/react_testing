@@ -10,6 +10,8 @@ import {
   Link
 } from "react-router-dom";
 
+import { v4 as uuidv4 } from 'uuid';
+
 import Detail from '../RecipeDetail/Detail'
 
 const useStyles = makeStyles(theme => ({
@@ -30,8 +32,8 @@ export default function SearchResults(props) {
     <div className={classes.root}>
       <List component="nav" aria-label="secondary mailbox folders">
         {props.data.map((name) => 
-        <Link to={{pathname: '/about' , query: name.name}}>
-          <ListItem>
+        <Link to={{pathname: '/about' , query: name.name}} key={uuidv4()}>
+          <ListItem key={uuidv4()}>
               <Typography variant="h6">
                   {name.name} 
                 </Typography>

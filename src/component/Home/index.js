@@ -79,7 +79,7 @@ class Home extends React.Component{
   }
   search(e) {
     var search_text = e.target.value;
-    fetch('http://127.0.0.1:8000/search', {
+    fetch('https://django-testing-and-deploy.herokuapp.com/api/search', {
       method: 'POST',
       body: JSON.stringify({
         "search_text": search_text,
@@ -88,11 +88,13 @@ class Home extends React.Component{
         "Content-type": "application/json; charset=UTF-8"
       }
     }).then(response => {
+        console.log(response);
         return response.json()
       }).then(json => {
         this.setState({
           names:json
         });
+        console.log(json)
     });
   }
 

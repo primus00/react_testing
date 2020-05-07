@@ -44,7 +44,7 @@ class Register extends React.Component<props> {
   register(){
 
 
-      fetch('http://localhost:8000/rest-auth/login/', {
+      fetch('https://django-testing-and-deploy.herokuapp.com/rest-auth/login/', {
       method: 'POST',
       body: JSON.stringify({
         "username": this.state.name,

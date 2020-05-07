@@ -41,7 +41,7 @@ class Register extends React.Component<props> {
   register(){
     if(this.state.pass1 !== this.state.pass2) alert("password and confirm password doenot match")
     else{
-      fetch('http://127.0.0.1:8000/rest-auth/registration/', {
+      fetch('https://django-testing-and-deploy.herokuapp.com/rest-auth/registration/', {
       method: 'POST',
       body: JSON.stringify({
         "username": this.state.name,
