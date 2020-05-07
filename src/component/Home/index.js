@@ -110,7 +110,7 @@ class Home extends React.Component{
         <FormControl fullWidth variant="outlined" className={classes.centering}>
         <Box>
           <Typography className={classes.top}>
-          lorem Ipsum Food Court
+          Food Court
           </Typography>
           <Typography className={classes.secondary}>
             Lorem Ipsum is simply dummy text of the printing and 
