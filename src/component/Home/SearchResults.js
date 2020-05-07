@@ -4,15 +4,11 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Typography from '@material-ui/core/Typography';
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
   Link
 } from "react-router-dom";
 
 import { v4 as uuidv4 } from 'uuid';
 
-import Detail from '../RecipeDetail/Detail'
 
 const useStyles = makeStyles(theme => ({
   root: {

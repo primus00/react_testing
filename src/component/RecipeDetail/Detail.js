@@ -85,7 +85,7 @@ class Detail extends React.Component<props> {
       <div className={classes.root}>
         <Grid container spacing={3}>
           <Grid item xs={12} className={classes.bannerimg}>
-            <img src={banner} style={{height:400, width:'100%'}}></img>
+            <img alt="banner" src={banner} style={{height:400, width:'100%'}}></img>
             <div className={classes.name}>
               {this.state.name}
             </div>
